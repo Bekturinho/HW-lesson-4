@@ -18,6 +18,8 @@ import Foundation
 //    
 //}
 //
+
+//
 //var user1 = User(username: "BEka", isPremiumUser: true)
 //var user2 = User(username: "Yan", isPremiumUser: false)
 //var user3 = User(username: "Tilek", isPremiumUser: false)
@@ -52,3 +54,16 @@ import Foundation
 //    ($0 + $1)
 //}))
 
+struct User{
+    var username: String
+    var isPremiumUser: Bool
+    
+}
+
+var allUser: [User?]
+var actualUsers:[User?] = allUser.compactMap({ a in
+    if a?.isPremiumUser != true{
+        return a
+    }
+    
+})
